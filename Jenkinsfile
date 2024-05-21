@@ -17,6 +17,14 @@ pipeline{
         echo "This is new feature on jenkins file 1"
       }
     }
+    stage("run on fix-feature branch"){
+      when {
+        branch "fix-feature"
+      }
+      steps {
+        echo "This is fix-feature on jenkins file 1"
+      }
+    }
   }
   
 }
